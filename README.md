@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-## Getting Started
+# [The Death Finder] 🎯
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Basic Details
+### Team Name: [callmesidhu]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Team Members
+- Team Lead: Sidharth S - College of Engineering Trivandrum
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Project Description
+This app will helps you to find when will you die and how will you die.
 
-## Learn More
+### The Problem (that doesn't exist)
+To find the use is dead or when will he die
 
-To learn more about Next.js, take a look at the following resources:
+### The Solution (that nobody asked for)
+How are you solving it? Keep it fun!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technical Details
+### Technologies/Components Used
+For Software:
+-  TypeScript,html,css 
+-  Next.js,tailwind.css
+-  next,clsx,react-router
+-  vercel,github,vscode,chatgpt api for response(not integrated)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Implementation
+For Software:
+# Installation
+   npm install 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Run
+   npm run dev 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# Diagrams
+ ![Desktop - 1](https://github.com/user-attachments/assets/83ae7d2d-c11d-4a59-930c-b029b1608706)
+
+
+### Project Demo
+# Video
+ 
+
+# Additional Demos
+  https://callmesidhu-useless-project.vercel.app
+
+## Team Contributions
+- Sidharth: Full work
+
+
+---
+Made with ❤️ at TinkerHub Useless Projects 
+
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProject--24-24?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
+
+
+
