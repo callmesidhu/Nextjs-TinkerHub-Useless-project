@@ -21,8 +21,8 @@ export default function Home() {
     <>
       <div className='top relative flex flex-col items-center justify-center w-full'>
         {/*   <Image src="/favicon.png" alt="Favicon"  layout="fill"  objectFit="contain"  className="absolute z-0 opacity-20 effect" /> */}
-        <h1 className='text-center rubik-wet-paint-regular text-9xl text-red-900 z-10'>The Death Finder</h1>
-        <h3 className='text-center rubik-wet-paint-regular text-4xl text-white z-10'>This app will helps you to find out when is your death.!</h3>
+        <h1 className='text-center rubik-wet-paint-regular text-7xl md:text-6xl lg:text-9xl text-red-900 z-10'>The Death Finder</h1>
+        <h3 className='text-center rubik-wet-paint-regular text-3xl md:text-4xl lg:text-5xl text-white z-10'>This app will helps you to find out when is your death.!</h3>
       </div>
       <div className="container flex flex-col items-center">
         <h2 className='text-white'>Select Your Date of Birth</h2>
