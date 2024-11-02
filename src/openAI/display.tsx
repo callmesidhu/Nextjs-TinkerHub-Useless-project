@@ -32,7 +32,7 @@ const Display = ({ id, type }: DisplayProps) => {
         if (entry) {
           setStory(entry.response);
         } else {
-          setStory('');
+          setStory(''); // Handle case where entry is not found
         }
       } catch (error) {
         console.error(error); // Log the error
