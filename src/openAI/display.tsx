@@ -11,8 +11,8 @@ interface Data {
 }
 
 interface DisplayProps {
-  id: number; // ID of the entry to fetch
-  type: 'future' | 'past'; // Type of the entry
+  id: number;
+  type: 'future' | 'past'; 
 }
 
 const Display = ({ id, type }: DisplayProps) => {
@@ -42,7 +42,7 @@ const Display = ({ id, type }: DisplayProps) => {
     };
 
     fetchData();
-  }, [id, type]); // Dependency array includes id and type to refetch when they change
+  }, [id, type]); 
 
   if (loading) return <p>Loading...</p>;
 

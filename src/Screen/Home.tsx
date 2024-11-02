@@ -26,7 +26,7 @@ export default function Home() {
       const deathYear = getRandomYear();
       const diffYear = currentYear - deathYear;
 
-      setResponseId(Math.floor(Math.random() * 50) + 1);
+      setResponseId(Math.floor(Math.random() * 100) + 1);
 
       if (diffYear === 0) {
         setMessage(`Sorry ${userName}, you will die after 29 years!`);
