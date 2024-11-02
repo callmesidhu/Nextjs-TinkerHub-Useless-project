@@ -32,7 +32,7 @@ const Display = ({ id, type }: DisplayProps) => {
         if (entry) {
           setStory(entry.response);
         } else {
-          setStory('Story not found');
+          setStory('');
         }
       } catch (error) {
         setStory('Error fetching data');
@@ -48,8 +48,6 @@ const Display = ({ id, type }: DisplayProps) => {
 
   return (
     <div>
-      {/* For debugging purposes, you can keep or remove these */}
-      <p>ID: {id}, Type: {type}</p>
       <p>{story}</p>
     </div>
   );

@@ -8,7 +8,7 @@ export default function Home() {
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [userName, setUserName] = useState('');
   const [message, setMessage] = useState('');
-  const [responseId, setResponseId] = useState(1); 
+  const [responseId, setResponseId] = useState(0); 
   const [responseType, setResponseType] = useState<'future' | 'past'>('past'); // Explicitly set the type
 
   function getRandomYear() {
@@ -35,7 +35,7 @@ export default function Home() {
         setResponseType('future'); 
       } else {
         setMessage(`Sorry ${userName}, you died before ${Math.abs(diffYear)} years!`);
-        setResponseType('past'); // Ensure 'past' is assigned for past events
+        setResponseType('past'); 
       }
     } else {
       setMessage('Please enter your name and select your date of birth.');
