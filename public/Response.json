@@ -1,0 +1,33 @@
+{       
+          "future": [
+            {
+              "id": 1,
+              "response": "You were at your favorite biryani spot, torn between the classic chicken and the fiery mutton. In a moment of pure indecision, you accidentally ordered ten plates instead of one. As you dove into the mountain of fragrant rice and tender meat, your friends cheered you on. Your stomach, however, couldn't keep up with your ambition, and you collapsed into a biryani-induced coma."
+            },
+            {
+              "id": 2,
+              "response": " the classic chicken and the fiery mutton. In a moment of pure indecision, you accidentally ordered ten plates instead of one. As you dove into the mountain of fragrant rice and tender meat, your friends cheered you on. Your stomach, however, couldn't keep up with your ambition, and you collapsed into a biryani-induced coma."
+            },
+            {
+              "id": 3,
+              "response": " In a moment of pure indecision, you accidentally ordered ten plates instead of one. As you dove into the mountain of fragrant rice and tender meat, your friends cheered you on. Your stomach, however, couldn't keep up with your ambition, and you collapsed into a biryani-induced coma."
+            }
+          ]
+        ,
+          "past": [
+            {
+              "id": 1,
+              "response": "indecision, you accidentally ordered ten plates instead of one. As you dove into the mountain of fragrant rice and tender meat, your friends cheered you on. Your stomach, however, couldn't keep up with your ambition, and you collapsed into a biryani-induced coma."
+            },
+            {
+              "id": 2,
+              "response": " of pure indecision, you accidentally ordered ten plates instead of one. As you dove into the mountain of fragrant rice and tender meat, your friends cheered you on. Your stomach, however, couldn't keep up with your ambition, and you collapsed into a biryani-induced coma."
+            },
+            {
+              "id": 3,
+              "response": "Yoment of pure indecision, you accidentally ordered ten plates instead of one. As you dove into the mountain of fragrant rice and tender meat, your friends cheered you on. Your stomach, however, couldn't keep up with your ambition, and you collapsed into a biryani-induced coma."
+            }
+          ]
+        }
+      
+      
