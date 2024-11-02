@@ -1,12 +1,13 @@
+
 import Loader from '@/Screen/Loader'
-import React from 'react'
+import Head from 'next/head';
 
-function page() {
+export default function Home() {
   return (
-    <div>
-      <Loader/>
-    </div>
-  )
+    <>
+      <div>
+        <Loader/>
+      </div>
+    </>
+  );
 }
-
-export default page
