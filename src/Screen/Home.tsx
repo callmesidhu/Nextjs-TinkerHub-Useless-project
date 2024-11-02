@@ -8,6 +8,11 @@ export default function Home() {
   const [message, setMessage] = useState('');
 
   const handleCheck = () => {
+        window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth', 
+              });
+              
     if (dateOfBirth && userName) {
       const birthDate = new Date(dateOfBirth);
       const age = new Date().getFullYear() - birthDate.getFullYear();
@@ -15,6 +20,8 @@ export default function Home() {
     } else {
       setMessage('Please enter your name and select a date of birth.');
     }
+
+
   };
 
   return (
@@ -42,7 +49,9 @@ export default function Home() {
         <button onClick={handleCheck} className="check-button">
           Check
         </button>
+        <div className='w-[90%] lg:w-[60%] bg-[#333] flex-1 h-auto p-10 rounded-3xl mb-10'>
         {message && <h3 className='text-white'>{message}</h3>}
+        </div>
       </div>
     </>
   );
