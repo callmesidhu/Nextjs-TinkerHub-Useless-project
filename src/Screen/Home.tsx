@@ -15,12 +15,20 @@ export default function Home() {
   const [showButton, setShowButton] = useState(false);
   const [showAd, setShowAd] = useState(false);
   const [adTitle, setAdTitle] = useState('');
+  const [adMessage, setAdMessage] = useState('');
 
   function getRandomYear() {
     return Math.floor(Math.random() * (2100 - 1900 + 1)) + 1900;
   }
   const handleAd =()=>{
     setShowAd(true);
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth', 
+    });
+    setTimeout(() => {
+      setAdMessage("🎉🎉Congratulations..!🎉🎊");
+    }, 13000);
   }
 
   const handleCheck = () => {
@@ -54,10 +62,12 @@ export default function Home() {
       setMessage('Please enter your name and select your date of birth.');
       setResponseId(0);
       setShowButton(false);
+      
     }
     setDateOfBirth('');
     setUserName('');
     setShowAd(false);
+    setAdMessage('');
   };
 
   return (
@@ -113,6 +123,15 @@ export default function Home() {
         )
          }
          </>)}
+         {adMessage && (
+          <div className={clsx('w-[90%] lg:w-[50%] bg-[#33333372] border-red-950 border-1 flex-1 rounded-3xl mb-8 z-40 bottom-0 absolute', {
+            'fade-in': message, 
+            'slide-up': message
+          })}>
+            {adMessage && <h3 className='text-red- text-3xl font-bold text-center'>{adMessage}</h3>}
+          </div>
+          
+        )}
       </div>
     </>
   );
