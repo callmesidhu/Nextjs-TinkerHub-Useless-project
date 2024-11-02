@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css';
+import Image from 'next/image';
 
 export default function Home() {
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -18,9 +19,10 @@ export default function Home() {
 
   return (
     <>
-      <div className='top flex flex-col items-center justify-center w-full'>
-        <h1 className='text-center rubik-wet-paint-regular text-9xl text-red-900'>The Death Finder</h1>
-        <h3 className='text-center rubik-wet-paint-regular text-4xl text-white'>This app helps you find out when is your death</h3>
+      <div className='top relative flex flex-col items-center justify-center w-full'>
+        {/*   <Image src="/favicon.png" alt="Favicon"  layout="fill"  objectFit="contain"  className="absolute z-0 opacity-20 effect" /> */}
+        <h1 className='text-center rubik-wet-paint-regular text-9xl text-red-900 z-10'>The Death Finder</h1>
+        <h3 className='text-center rubik-wet-paint-regular text-4xl text-white z-10'>This app will helps you to find out when is your death.!</h3>
       </div>
       <div className="container flex flex-col items-center">
         <h2 className='text-white'>Select Your Date of Birth</h2>

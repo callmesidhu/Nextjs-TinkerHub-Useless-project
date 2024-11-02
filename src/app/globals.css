@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 body{
-  background-color: #030303;
   color: white;
+  background-color: black;
+  background-image: url('/bg.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0000; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #400101; 
+  border-radius: 16px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #be0202; 
 }
