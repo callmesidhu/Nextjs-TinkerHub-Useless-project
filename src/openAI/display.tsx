@@ -35,6 +35,7 @@ const Display = ({ id, type }: DisplayProps) => {
           setStory('');
         }
       } catch (error) {
+        console.error(error); // Log the error
         setStory('Error fetching data');
       } finally {
         setLoading(false);
