@@ -23,11 +23,11 @@ export default function Loader() {
   }
 
   return (
-    <div className="flex items-center justify-center w-screen h-screen overflow-hidden bg-black">
-      <h1 className="absolute text-white z-10 text-xl font-semibold">Please Wait....</h1>
-      <div className="relative w-full h-full">
-        <Image src="/Loader.png" className='effect opacity-50' alt="Loading..." layout="fill" objectFit="contain" />
+    <div className="flex items-center justify-center w-screen h-screen overflow-hidden bg-black flex-col">
+
+        <Image src="/favicon.png" className='effect' alt="" width={100} height={100} />
+        <h1 className="text-white z-10 text-xl font-semibold">Please Wait....</h1>
       </div>
-    </div>
+ 
   );
 }
