@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Smile App",
+  title: "The Death App",
   description: "This is a Useless project for TinkerHUB by callmesidhu",
 };
 

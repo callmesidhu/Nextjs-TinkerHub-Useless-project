@@ -1,0 +1,23 @@
+
+      .effect {
+        width: 200px; /* Adjust size as needed */
+        transition: transform 0.3s ease-in-out;
+        animation: glow 2s ease-in-out infinite;
+      }
+      
+      .effect:hover {
+        transform: scale(1.01); /* Scale up on hover for effect */
+      }
+      
+      @keyframes glow {
+        0% {
+          filter: drop-shadow(0 0 5px rgb(255, 0, 0)) drop-shadow(0 0 10px rgb(255, 0, 0));
+        }
+        50% {
+          filter: drop-shadow(0 0 15px rgb(255, 0, 0)) drop-shadow(0 0 30px rgb(255, 0, 0));
+        }
+        100% {
+          filter: drop-shadow(0 0 5px rgb(255, 0, 0)) drop-shadow(0 0 10px rgb(255, 0, 0));
+        }
+      }
+      
