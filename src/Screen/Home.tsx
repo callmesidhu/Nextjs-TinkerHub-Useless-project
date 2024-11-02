@@ -13,7 +13,6 @@ export default function Home() {
   const [responseType, setResponseType] = useState<'future' | 'past'>('past');
   const [showBox, setShowBox] = useState(false);
 
-
   function getRandomYear() {
     return Math.floor(Math.random() * (2100 - 1900 + 1)) + 1900;
   }
@@ -49,35 +48,36 @@ export default function Home() {
   return (
     <>
       <div className='top relative flex flex-col items-center justify-center w-full'>
-        <h1 className='text-center rubik-wet-paint-regular text-7xl md:text-6xl lg:text-9xl text-red-900 z-10'>The Death Finder</h1>
-        <h3 className='text-center rubik-wet-paint-regular text-3xl md:text-4xl lg:text-5xl text-white z-10'>This app will help you to find out when is your death!</h3>
+        <h1 className={clsx('text-center rubik-wet-paint-regular text-7xl md:text-6xl lg:text-9xl text-red-900 z-10', 'fade-in')}>The Death Finder</h1>
+        <h3 className={clsx('text-center rubik-wet-paint-regular text-3xl md:text-4xl lg:text-5xl text-white z-10', 'fade-in')}>This app will help you to find out when is your death!</h3>
       </div>
       <div className="container flex flex-col items-center">
-        <h2 className='text-white'>Select Your Date of Birth</h2>
+        <h2 className={clsx('text-white', 'fade-in')}>Select Your Date of Birth</h2>
         <input
           type="date"
           value={dateOfBirth}
           onChange={(e) => setDateOfBirth(e.target.value)}
-          className="date-input"
+          className={clsx("date-input", "input-fade-in")}
         />
         <input
           type="text"
           placeholder="Enter your name"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
-          className="date-input"
+          className={clsx("date-input", "input-fade-in")}
         />
-        <button onClick={handleCheck} className="check-button">
+        <button onClick={handleCheck} className={clsx("check-button", "button-fade-in")}>
           Check
         </button>
-        {showBox &&
-        (<div className={clsx('w-[90%] lg:w-[60%] bg-[#333333e5] flex-1 h-auto p-10 rounded-3xl mb-10 z-40', {
-          'fade-in': message, 
-          'slide-up': message
-        })}>
-          {message && <h3 className='text-white text-lg'>{message}</h3>}
-          <Display id={responseId} type={responseType} />
-        </div>)}
+        {showBox && (
+          <div className={clsx('w-[90%] lg:w-[60%] bg-[#333333e5] flex-1 h-auto p-10 rounded-3xl mb-10 z-40', {
+            'fade-in': message, 
+            'slide-up': message
+          })}>
+            {message && <h3 className='text-white text-lg'>{message}</h3>}
+            <Display id={responseId} type={responseType} />
+          </div>
+        )}
       </div>
     </>
   );
