@@ -1,24 +1,36 @@
 import React, { useState } from 'react';
 import './Home.css';
-import Image from 'next/image';
 
 export default function Home() {
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [userName, setUserName] = useState('');
   const [message, setMessage] = useState('');
+  function getRandomYear() {
+        return Math.floor(Math.random() * (2100 - 1900 + 1)) + 1900;
+      }
 
   const handleCheck = () => {
         window.scrollTo({
                 top: document.documentElement.scrollHeight,
                 behavior: 'smooth', 
               });
-              
+
     if (dateOfBirth && userName) {
-      const birthDate = new Date(dateOfBirth);
-      const age = new Date().getFullYear() - birthDate.getFullYear();
-      setMessage(`${userName}, you are ${age} years old!`);
+      const currentYear = new Date().getFullYear();
+      const deathYear = getRandomYear();
+      const diffYear = currentYear- deathYear;
+      if (diffYear==0){
+        setMessage(`Sorry ${userName}, you will die after 29 years !`);
+      }else if(diffYear>0){
+      setMessage(`Sorry ${userName}, you will die after ${diffYear} years !`);
+      }else {
+        setMessage(`Sorry ${userName}, you died before ${diffYear} years !`);
+        }
+
+
+
     } else {
-      setMessage('Please enter your name and select a date of birth.');
+      setMessage('Please enter your name and select your date of birth.');
     }
 
 
@@ -49,8 +61,8 @@ export default function Home() {
         <button onClick={handleCheck} className="check-button">
           Check
         </button>
-        <div className='w-[90%] lg:w-[60%] bg-[#333] flex-1 h-auto p-10 rounded-3xl mb-10'>
-        {message && <h3 className='text-white'>{message}</h3>}
+        <div className='w-[90%] lg:w-[60%] bg-[#333333e5] flex-1 h-auto p-10 rounded-3xl mb-10 z-40'>
+        {message && <h3 className='text-white text-lg'>{message}</h3>}
         </div>
       </div>
     </>
