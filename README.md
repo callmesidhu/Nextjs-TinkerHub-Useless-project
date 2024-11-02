@@ -14,7 +14,7 @@
 This app will helps you to find when will you die and how will you die.
 
 ### The Problem (that doesn't exist)
-To find the use is dead or when will he die
+To find the user is dead or when will he die
 
 ### The Solution (that nobody asked for)
 How are you solving it? Keep it fun!
