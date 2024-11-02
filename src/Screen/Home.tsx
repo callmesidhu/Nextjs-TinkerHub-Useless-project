@@ -68,7 +68,7 @@ export default function Home() {
         </button>
         <div className='w-[90%] lg:w-[60%] bg-[#333333e5] flex-1 h-auto p-10 rounded-3xl mb-10 z-40'>
           {message && <h3 className='text-white text-lg'>{message}</h3>}
-          <Display id={responseId} type={responseType} /> {/* Type should no longer cause an error */}
+          <Display id={responseId} type={responseType} /> 
         </div>
       </div>
     </>
