@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import clsx from 'clsx'; // Import clsx
 import './Home.css';
 import Display from '@/openAI/display';
 
@@ -9,13 +10,16 @@ export default function Home() {
   const [userName, setUserName] = useState('');
   const [message, setMessage] = useState('');
   const [responseId, setResponseId] = useState(0); 
-  const [responseType, setResponseType] = useState<'future' | 'past'>('past'); // Explicitly set the type
+  const [responseType, setResponseType] = useState<'future' | 'past'>('past');
+  const [showBox, setShowBox] = useState(false);
+
 
   function getRandomYear() {
     return Math.floor(Math.random() * (2100 - 1900 + 1)) + 1900;
   }
 
   const handleCheck = () => {
+    setShowBox(true);
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: 'smooth', 
@@ -66,10 +70,14 @@ export default function Home() {
         <button onClick={handleCheck} className="check-button">
           Check
         </button>
-        <div className='w-[90%] lg:w-[60%] bg-[#333333e5] flex-1 h-auto p-10 rounded-3xl mb-10 z-40'>
+        {showBox &&
+        (<div className={clsx('w-[90%] lg:w-[60%] bg-[#333333e5] flex-1 h-auto p-10 rounded-3xl mb-10 z-40', {
+          'fade-in': message, 
+          'slide-up': message
+        })}>
           {message && <h3 className='text-white text-lg'>{message}</h3>}
-          <Display id={responseId} type={responseType} /> 
-        </div>
+          <Display id={responseId} type={responseType} />
+        </div>)}
       </div>
     </>
   );
