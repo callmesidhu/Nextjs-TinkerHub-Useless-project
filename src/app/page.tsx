@@ -1,13 +1,18 @@
-
 import Loader from '@/Screen/Loader'
-import Head from 'next/head';
+import React from 'react'
+import './globals.css'
 
-export default function Home() {
+function page() {
   return (
-    <>
-      <div>
-        <Loader/>
-      </div>
-    </>
-  );
+    <div >
+    {/*    <video autoPlay loop muted className="backgroundVideo">
+          <source src="/smoke.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+    */}
+      <Loader/>
+    </div>
+  )
 }
+
+export default page

@@ -42,7 +42,10 @@ export default function Home() {
       }
     } else {
       setMessage('Please enter your name and select your date of birth.');
+      setResponseId(0)
     }
+    setDateOfBirth('');
+    setUserName('');
   };
 
   return (
