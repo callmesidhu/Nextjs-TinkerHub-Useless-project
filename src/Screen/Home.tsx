@@ -12,9 +12,15 @@ export default function Home() {
   const [responseId, setResponseId] = useState(0); 
   const [responseType, setResponseType] = useState<'future' | 'past'>('past');
   const [showBox, setShowBox] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const [showAd, setShowAd] = useState(false);
+  const [adTitle, setAdTitle] = useState('');
 
   function getRandomYear() {
     return Math.floor(Math.random() * (2100 - 1900 + 1)) + 1900;
+  }
+  const handleAd =()=>{
+    setShowAd(true);
   }
 
   const handleCheck = () => {
@@ -36,16 +42,22 @@ export default function Home() {
       } else if (diffYear > 0) {
         setMessage(`Sorry ${userName}, you will die after ${diffYear} years!`);
         setResponseType('future'); 
+        setShowButton(true);
+        setAdTitle('To increase your life span upto 10 years click below button');
       } else {
         setMessage(`Sorry ${userName}, you died before ${Math.abs(diffYear)} years!`);
         setResponseType('past'); 
+        setShowButton(true);
+        setAdTitle('To reborn click below button');
       }
     } else {
       setMessage('Please enter your name and select your date of birth.');
-      setResponseId(0)
+      setResponseId(0);
+      setShowButton(false);
     }
     setDateOfBirth('');
     setUserName('');
+    setShowAd(false);
   };
 
   return (
@@ -72,6 +84,14 @@ export default function Home() {
         <button onClick={handleCheck} className={clsx("check-button", "button-fade-in")}>
           Check
         </button>
+        {showAd ? (
+          <video className="m-10 mb-11" autoPlay>
+          <source src="/ad.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        ):
+        (
+        <>
         {showBox && (
           <div className={clsx('w-[90%] lg:w-[60%] bg-[#333333e5] flex-1 h-auto p-10 rounded-3xl mb-10 z-40', {
             'fade-in': message, 
@@ -80,7 +100,19 @@ export default function Home() {
             {message && <h3 className='text-white text-lg'>{message}</h3>}
             <Display id={responseId} type={responseType} />
           </div>
+          
         )}
+         {
+         showButton && (
+          <div className='flex justify-center items-center flex-col'>   
+            <h4 className='text-center'>{adTitle}</h4>
+            <button onClick={handleAd} className={clsx("check-button", "button-fade-in")}>
+              click here
+            </button>
+          </div>
+        )
+         }
+         </>)}
       </div>
     </>
   );
