@@ -27,8 +27,6 @@ export default function Home() {
         setMessage(`Sorry ${userName}, you died before ${diffYear} years !`);
         }
 
-
-
     } else {
       setMessage('Please enter your name and select your date of birth.');
     }
